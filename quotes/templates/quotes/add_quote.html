@@ -1,0 +1,15 @@
+{% extends 'quotes/base.html' %}
+{% load extract %}
+
+{% block content %}
+
+
+<h1>Додати нову цитату</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Відображаємо форму у вигляді абзаців -->
+        <button type="submit">Додати цитату</button>
+    </form>
+
+{% endblock %}
